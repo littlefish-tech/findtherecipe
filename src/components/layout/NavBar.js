@@ -5,7 +5,7 @@ class NavBar extends Component {
         return (
             <nav className="navbar">
                 <h3>
-                    <i className="fas fa-utensils" />Find the Recipe
+                    <i className={this.props.icon} /> {this.props.title}
                 </h3>
             </nav>
         )
