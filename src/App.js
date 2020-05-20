@@ -35,9 +35,11 @@ class App extends Component {
     return (
       <Fragment>
         <NavBar icon="fas fa-utensils" title="Find the Recipe" />
-        <Alert alert={this.state.alert} />
-        <Search searchRecipes={this.searchRecipes} setAlert={this.setAlert} showClear={this.state.recipes.length > 0 ? true : false} clearRecipes={this.clearRecipes} />
-        <Recipes searchRecipes={this.searchRecipes} recipes={this.state.recipes} />
+        <div className="container">
+          <Alert alert={this.state.alert} />
+          <Search searchRecipes={this.searchRecipes} setAlert={this.setAlert} showClear={this.state.recipes.length > 0 ? true : false} clearRecipes={this.clearRecipes} />
+          <Recipes searchRecipes={this.searchRecipes} recipes={this.state.recipes} />
+        </div>
       </Fragment >
     );
   }

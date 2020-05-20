@@ -6,6 +6,8 @@ const ReciptItem = (props) => {
             <div className="card grid-2">
                 <div className="all-center">
                     <img src={props.recipe.recipe.image} alt="" style={{ width: "200px" }} />
+                </div>
+                <div>
                     <h4>Name: {props.recipe.recipe.label}</h4>
                     <p>Total Calories: {Math.floor(props.recipe.recipe.calories)}</p>
                     <p>Time need to prepare: {props.recipe.recipe.totalTime} mins</p>
