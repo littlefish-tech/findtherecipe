@@ -7,13 +7,14 @@ const ReciptItem = (props) => {
                 <div className="all-center">
                     <img src={props.recipe.recipe.image} alt="" style={{ width: "200px" }} />
                     <h4>Name: {props.recipe.recipe.label}</h4>
-                    <p>Total Calories: {props.recipe.recipe.calories}</p>
+                    <p>Total Calories: {Math.floor(props.recipe.recipe.calories)}</p>
                     <p>Time need to prepare: {props.recipe.recipe.totalTime} mins</p>
                     <div>Ingredients:
                         <div>1. {props.recipe.recipe.ingredients[0].text}</div>
                         <div>2. {props.recipe.recipe.ingredients[1].text}</div>
-                        <div>3. {props.recipe.recipe.ingredients[2].text}</div>
-
+                    </div>
+                    <div>
+                        <a href={props.recipe.recipe.shareAs} className="btn btn-success btn-sm my-1">Read More</a>
                     </div>
                 </div>
             </div>

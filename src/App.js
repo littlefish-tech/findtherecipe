@@ -3,7 +3,8 @@ import './App.css';
 import NavBar from "./components/layout/NavBar"
 import Recipes from "./components/recipes/recipes"
 import axios from "axios";
-import Search from "./components/recipes/Search"
+import Search from "./components/recipes/Search";
+import Alert from "./components/layout/Alert";
 
 class App extends Component {
   state = {
@@ -22,12 +23,20 @@ class App extends Component {
     this.setState({ recipes: res.data.hits, loading: false })
   }
 
+  setAlert = (msg, type) => {
+    this.setState({ alert: { msg: msg, type: type } })
+  }
+
+  clearRecipes = () => {
+    this.setState({ recipes: [] })
+  }
 
   render() {
     return (
       <Fragment>
         <NavBar icon="fas fa-utensils" title="Find the Recipe" />
-        <Search searchRecipes={this.searchRecipes} />
+        <Alert alert={this.state.alert} />
+        <Search searchRecipes={this.searchRecipes} setAlert={this.setAlert} showClear={this.state.recipes.length > 0 ? true : false} clearRecipes={this.clearRecipes} />
         <Recipes searchRecipes={this.searchRecipes} recipes={this.state.recipes} />
       </Fragment >
     );
