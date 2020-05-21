@@ -7,7 +7,7 @@ class About extends Component {
                 <h1>Find the Recipe</h1>
                 <p>Find the recipe to help you build your dishes</p>
                 <p> About me: </p>
-                <h6>I am a person who loves to cook and enjoying to create amazing dishes</h6>
+                <h4>I am a person who loves to cook and enjoying to create amazing dishes</h4>
                 <p>Version: 1.0.0</p>
             </div>
         )
