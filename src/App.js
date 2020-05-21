@@ -5,6 +5,8 @@ import Recipes from "./components/recipes/recipes"
 import axios from "axios";
 import Search from "./components/recipes/Search";
 import Alert from "./components/layout/Alert";
+import About from "./components/pages/About"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 class App extends Component {
   state = {
@@ -27,20 +29,31 @@ class App extends Component {
     this.setState({ alert: { msg: msg, type: type } })
   }
 
+  clearAlert = () => {
+    this.setState({ alert: null, loading: false })
+  }
+
   clearRecipes = () => {
-    this.setState({ recipes: [] })
+    this.setState({ recipes: [], loading: false })
   }
 
   render() {
     return (
-      <Fragment>
+      <Router>
         <NavBar icon="fas fa-utensils" title="Find the Recipe" />
         <div className="container">
-          <Alert alert={this.state.alert} />
-          <Search searchRecipes={this.searchRecipes} setAlert={this.setAlert} showClear={this.state.recipes.length > 0 ? true : false} clearRecipes={this.clearRecipes} />
-          <Recipes searchRecipes={this.searchRecipes} recipes={this.state.recipes} />
+          <Alert alert={this.state.alert} clearAlert={this.clearAlert} />
+          <Switch>
+            <Route exact path="/" render={props => (
+              <Fragment>
+                <Search searchRecipes={this.searchRecipes} setAlert={this.setAlert} showClear={this.state.recipes.length > 0 ? true : false} clearRecipes={this.clearRecipes} />
+                <Recipes searchRecipes={this.searchRecipes} recipes={this.state.recipes} loading={this.state.loading} />
+              </Fragment>
+            )} />
+            <Route exact path="/about" component={About} />
+          </Switch>
         </div>
-      </Fragment >
+      </Router >
     );
   }
 }

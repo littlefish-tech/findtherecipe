@@ -1,15 +1,20 @@
 import React, { Component } from "react";
 import RecipeItem from "./recipeItem";
+import Spinner from "../layout/Spinner";
 
 const Recipes = (props) => {
 
-    return (
-        <div stype={recipeStyle}>
-            {props.recipes.map((recipe, index) => (
-                <RecipeItem key={index} recipe={recipe} />)
-            )}
-        </div>
-    )
+    if (props.loading) {
+        return (<Spinner />)
+    } else {
+        return (
+            <div stype={recipeStyle}>
+                {props.recipes.map((recipe, index) => (
+                    <RecipeItem key={index} recipe={recipe} />)
+                )}
+            </div>
+        )
+    }
 }
 
 const recipeStyle = {
