@@ -27,11 +27,10 @@ class App extends Component {
 
   setAlert = (msg, type) => {
     this.setState({ alert: { msg: msg, type: type } })
+
+    setTimeout(() => this.setState({ alert: null }), 5000)
   }
 
-  clearAlert = () => {
-    this.setState({ alert: null, loading: false })
-  }
 
   clearRecipes = () => {
     this.setState({ recipes: [], loading: false })
@@ -42,7 +41,7 @@ class App extends Component {
       <Router>
         <NavBar icon="fas fa-utensils" title="Find the Recipe" />
         <div className="container">
-          <Alert alert={this.state.alert} clearAlert={this.clearAlert} />
+          <Alert alert={this.state.alert} />
           <Switch>
             <Route exact path="/" render={props => (
               <Fragment>
