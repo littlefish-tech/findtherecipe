@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/findtherecipe/static/css/main.ff748dba.chunk.css",
+    "main.js": "/findtherecipe/static/js/main.7ace3399.chunk.js",
+    "main.js.map": "/findtherecipe/static/js/main.7ace3399.chunk.js.map",
+    "runtime-main.js": "/findtherecipe/static/js/runtime-main.3fd82756.js",
+    "runtime-main.js.map": "/findtherecipe/static/js/runtime-main.3fd82756.js.map",
+    "static/js/2.7df31753.chunk.js": "/findtherecipe/static/js/2.7df31753.chunk.js",
+    "static/js/2.7df31753.chunk.js.map": "/findtherecipe/static/js/2.7df31753.chunk.js.map",
+    "index.html": "/findtherecipe/index.html",
+    "precache-manifest.c744e4316eaf47d2c48020db35269009.js": "/findtherecipe/precache-manifest.c744e4316eaf47d2c48020db35269009.js",
+    "service-worker.js": "/findtherecipe/service-worker.js",
+    "static/css/main.ff748dba.chunk.css.map": "/findtherecipe/static/css/main.ff748dba.chunk.css.map",
+    "static/js/2.7df31753.chunk.js.LICENSE.txt": "/findtherecipe/static/js/2.7df31753.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3fd82756.js",
+    "static/js/2.7df31753.chunk.js",
+    "static/css/main.ff748dba.chunk.css",
+    "static/js/main.7ace3399.chunk.js"
+  ]
+}
