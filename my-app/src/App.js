@@ -43,7 +43,7 @@ class App extends Component {
         <div className="container">
           <Alert alert={this.state.alert} />
           <Switch>
-            <Route exact path="/findtherecipe/" render={props => (
+            <Route exact path="/" render={props => (
               <Fragment>
                 <Search searchRecipes={this.searchRecipes} setAlert={this.setAlert} showClear={this.state.recipes.length > 0 ? true : false} clearRecipes={this.clearRecipes} />
                 <Recipes searchRecipes={this.searchRecipes} recipes={this.state.recipes} loading={this.state.loading} />
