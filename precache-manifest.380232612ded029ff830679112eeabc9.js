@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2523d1a4ed7259f17e1ce81a2b00ff6f",
+    "revision": "0b8b4e201d7a0ac1c2082f2be9769dfd",
     "url": "/findtherecipe/index.html"
   },
   {
-    "revision": "cfd6fc737a7444d83d60",
+    "revision": "3189026c87990c97a3bd",
     "url": "/findtherecipe/static/css/main.ff748dba.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/findtherecipe/static/js/2.7df31753.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "cfd6fc737a7444d83d60",
-    "url": "/findtherecipe/static/js/main.0470e57b.chunk.js"
+    "revision": "3189026c87990c97a3bd",
+    "url": "/findtherecipe/static/js/main.c7dee6d9.chunk.js"
   },
   {
     "revision": "d72daa40c926e7c5513f",
